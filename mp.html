@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/lpoc.css" />
+    <script src="js/lpoc.js" async defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="h1">
+        <span>臺灣臺北地方法院</span>《訴訟程序視訊諮詢服務》管理系統
+      </h1>
+      <div class="navInfo">
+        <time>112-7-24 上午</time>
+        <div class="member">XX院區 朱小伶</div>
+        <div class="setting">設定</div>
+        <div class="logOut"><button>登出</button></div>
+      </div>
+      <nav class="mainMenu">
+        <div class="hamburger-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div class="mainContent">
+      <div class="tableWrapper">
+        <!-- 如果要能夠左右滾動 則須在最外層增加 class “tableWrapper”在table同層 增加 class "scrollTable" -->
+        <!-- 如果表格要可以升降冪，在table同層 增加 class "tableSort" -->
+        <table class="scrollTable tableSort">
+          <thead>
+            <tr>
+              <th scope="col" data-column="0">區公所</th>
+              <th scope="col" data-column="1">抽號時間</th>
+              <th scope="col" class="sortable" data-column="2">抽號號碼</th>
+              <th scope="col" data-column="3">服務狀態</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>本院院區</td>
+              <td>11:51:17</td>
+              <td>1</td>
+              <td>服務中</td>
+            </tr>
+            <tr>
+              <td>本院院區</td>
+              <td>11:58:17</td>
+              <td>2</td>
+              <td>已服務</td>
+            </tr>
+            <tr>
+              <td>新北市烏來</td>
+              <td>11:59:17</td>
+              <td>3</td>
+              <td>過號</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <table>
+        <caption>
+          07表
+          <!-- <span class="summary">表格摘要</span> -->
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">選擇</th>
+            <th scope="col">日期</th>
+            <th scope="col">預約人姓名</th>
+            <th scope="col">時段／組別</th>
+            <th scope="col">問題簡述</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td scope="row">
+              <input type="checkbox" name="" value="" title="" checked="" />
+            </td>
+            <td>112-07-25</td>
+            <td>預約測試</td>
+            <td>9:00-9:20/1</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <table>
+        <caption>
+          08表
+          <!-- <span class="summary">表格摘要</span> -->
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">流水號</th>
+            <th scope="col">視訊時間</th>
+            <th scope="col">消息來源</th>
+            <th scope="col">取號方式</th>
+            <th scope="col">現場人員服務</th>
+            <th scope="col">法院視訊服務</th>
+            <th scope="col">法院是否有請您再找律師進行實體諮詢</th>
+            <th scope="col">意見及建議</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td scope="row">8</td>
+            <td>112074 下午</td>
+            <td>親友告知</td>
+            <td>現場抽號</td>
+            <td>很滿意</td>
+            <td>很滿意</td>
+            <td>否</td>
+            <td>很好，聲音再大聲一點會更好</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="tableWrapper">
+        <table class="scrollTable">
+          <!-- 無障礙 caption 標題預設隱藏 -->
+          <caption>
+            無障礙表格標題
+            <!-- 若表格內容複雜，可以補充摘要(summary)來加強說明表格內容，但 內容不要與標題重複 -->
+            <!-- <span class="summary">表格摘要</span> -->
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">th 1</th>
+              <th scope="col">th 2</th>
+              <th scope="col">th 3</th>
+              <th scope="col">th 4</th>
+              <th scope="col">th 5</th>
+              <th scope="col">th 6</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">th A</th>
+              <td>td 資料</td>
+              <td>td 資料</td>
+              <td>td 資料</td>
+              <td>td 資料</td>
+              <td>td 資料</td>
+            </tr>
+            <tr>
+              <th scope="row">th B</th>
+              <td>td 資料</td>
+              <td>td 資料</td>
+              <td>td 資料</td>
+              <td>td 資料</td>
+              <td>td 資料</td>
+            </tr>
+            <tr>
+              <th scope="row">th C</th>
+              <td>td 資料</td>
+              <td>td 資料</td>
+              <td>td 資料</td>
+              <td>td 資料</td>
+              <td>td 資料</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

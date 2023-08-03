@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/lpoc.css" />
+    <script src="js/lpoc.js" async defer></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="header">
+        <h1 class="h1">
+          <span class="dep"><a href="">臺灣臺北地方法院</a></span>
+          <span class="sys">《訴訟程序視訊諮詢服務》管理系統</span>
+          <time>112-7-24 上午</time>
+        </h1>
+
+        <div class="navInfo">
+          <div class="member">
+            XX院區 朱小伶 <a href="" class="setting">設定</a>
+          </div>
+          <a href="" class="logOut">登出</a>
+        </div>
+        <div class="refresh">
+          26秒後自動更新
+          <button>手動更新</button>
+        </div>
+        <div class="subTitle">
+          <span>《訴訟程序視訊諮詢服務》</span>管理系統
+        </div>
+      </header>
+      <div class="mainContent">
+        <div class="mainMenu">
+          <ul>
+            <li><a href="" class="active">現場抽號</a></li>
+            <li><a href="">預約今日進度</a></li>
+            <li><a href="">預約登錄</a></li>
+            <li><a href="">查詢/取消預約</a></li>
+            <li><a href="">問卷新增</a></li>
+            <li><a href="">問卷管理</a></li>
+            <li><a href="">報表</a></li>
+          </ul>
+        </div>
+        <div class="numberList">
+          <div class="numberBlock">已抽號碼<span class="number">0</span></div>
+          <div class="numberBlock">等待號數<span class="number">0</span></div>
+          <div class="numberBlock">
+            本時段號數餘額<span class="number">20</span>
+          </div>
+        </div>
+        <div class="takeNumber">
+          <button>抽號</button>
+        </div>
+        <div class="tableWrapper">
+          <!-- 如果要能夠左右滾動 則須在最外層增加 class “tableWrapper”在table同層 增加 class "scrollTable" -->
+          <!-- 如果表格要可以升降冪，在table同層 增加 class "tableSort" -->
+          <table class="scrollTable tableSort">
+            <thead>
+              <tr>
+                <th scope="col">區公所</th>
+                <th scope="col">抽號時間</th>
+                <th scope="col" data-type="number" class="sortable">
+                  抽號號碼
+                </th>
+                <th scope="col">服務狀態</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="serving">
+                <td>本院院區</td>
+                <td>11:51:17</td>
+                <td>1</td>
+                <td>服務中</td>
+              </tr>
+              <tr>
+                <td>本院院區</td>
+                <td>11:58:17</td>
+                <td>2</td>
+                <td>已服務</td>
+              </tr>
+              <tr>
+                <td>新北市烏來</td>
+                <td>11:59:17</td>
+                <td>3</td>
+                <td>過號</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

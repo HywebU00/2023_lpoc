@@ -1,0 +1,114 @@
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border-top: 2px solid #221f1e;
+  border-bottom: 2px solid #221f1e;
+}
+tr.serving {
+  background: #f6ebdf;
+}
+th {
+  background: #efeded;
+  padding: 16px 8px;
+  text-align: center;
+  font-weight: normal;
+}
+td {
+  padding: 16px 8px;
+  text-align: left;
+  border-top: 1px solid #221f1e;
+  &.center {
+    text-align: center;
+  }
+  &.left {
+    text-align: left;
+  }
+  &.right {
+    text-align: right;
+  }
+  a {
+    color: #bd601c;
+  }
+}
+.tableSort {
+  th.sortable {
+    cursor: pointer;
+    position: relative;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      font-size: 10px;
+      right: 10px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+    }
+    &::before {
+      border-width: 0 8px 10px 8px;
+      border-color: transparent transparent #ccc transparent;
+    }
+    &::after {
+      border-width: 10px 8px 0 8px;
+      border-color: #ccc transparent transparent transparent;
+      top: 28px;
+    }
+  }
+  th.sort-asc::after {
+    border-color: #444 transparent transparent transparent;
+  }
+  th.sort-desc::before {
+    border-color: transparent transparent #444 transparent;
+  }
+}
+
+.tableWrapper {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    display: block;
+    clear: both;
+    zoom: 1;
+    overflow: hidden;
+    overflow-x: auto;
+    padding-bottom: 1em;
+    -webkit-overflow-scrolling: touch;
+    -webkit-transform: translate3d(0, 0, 0);
+    table {
+      width: 100%;
+      // display:none;
+      min-width: 600px;
+    }
+  }
+  .scrollTable {
+    min-width: 600px;
+  }
+  .scrollTableNav {
+    width: 60px;
+    position: absolute;
+    transition: 0.5s opacity;
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.8) 33%,
+      rgba(255, 255, 255, 0.6) 39%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+  .scrollTableNavLeft {
+    left: 0;
+    display: none;
+  }
+  .scrollTableNavRight {
+    right: 0;
+    transform: rotateY(180deg);
+  }
+  .scrollTableNavLeft .scrollTableLeftBtn,
+  .scrollTableNavRight .scrollTableRightBtn {
+    width: 35px;
+    height: 100%;
+    background: url(../images/icon_ar.svg) no-repeat center;
+    cursor: pointer;
+  }
+}
