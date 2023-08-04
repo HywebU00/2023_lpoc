@@ -28,6 +28,11 @@ td {
   }
   a {
     color: #bd601c;
+    &:hover,
+    &:focus {
+      color: #433b39;
+      text-decoration: none;
+    }
   }
 }
 .tableSort {

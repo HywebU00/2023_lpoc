@@ -187,81 +187,6 @@ function scrollTables(obj) {
     scrollTables('table');
   });
 
-  // class SortableTable {
-  //     constructor(selector) {
-  //         this.table = document.querySelector(selector);
-  //         this.headers = this.table.querySelectorAll('th.sortable');
-  //         this.sortState = {
-  //             column: null,
-  //             order: 'asc'
-  //         };
-
-  //         this.init();
-  //     }
-
-  //     init() {
-  //         this.addEventListeners();
-  //     }
-
-  //     addEventListeners() {
-  //         this.headers.forEach((header, index) => {
-  //             header.addEventListener('click', () => this.handleHeaderClick(index));
-  //         });
-  //     }
-
-  //     handleHeaderClick(column) {
-  //         if (this.sortState.column === column) {
-  //             this.toggleSortOrder();
-  //         } else {
-  //             this.sortState.column = column;
-  //             this.sortState.order = 'asc';
-  //         }
-
-  //         this.sortData(this.sortState.column, this.sortState.order);
-  //         this.updateSortIndicator();
-  //     }
-
-  //     toggleSortOrder() {
-  //         this.sortState.order = this.sortState.order === 'asc' ? 'desc' : 'asc';
-  //     }
-
-  //     sortData(column, order) {
-  //         const tbody = this.table.querySelector('tbody');
-  //         const rows = Array.from(tbody.querySelectorAll('tr'));
-
-  //         rows.sort((rowA, rowB) => {
-  //             const cellA = rowA.querySelectorAll('td')[column].textContent.trim();
-  //             const cellB = rowB.querySelectorAll('td')[column].textContent.trim();
-
-  //             if (column === 0) {
-  //                 // 第一欄中文直接使用localeCompare
-  //                 return order === 'asc' ? cellA.localeCompare(cellB) : cellB.localeCompare(cellA);
-  //             } else {
-  //                 // 其他欄位使用數字排序
-  //                 const numberA = parseFloat(cellA);
-  //                 const numberB = parseFloat(cellB);
-  //                 if (!isNaN(numberA) && !isNaN(numberB)) {
-  //                     return order === 'asc' ? numberA - numberB : numberB - numberA;
-  //                 } else {
-  //                     return 0;
-  //                 }
-  //             }
-  //         });
-
-  //         rows.forEach(row => tbody.appendChild(row));
-  //     }
-
-  //     updateSortIndicator() {
-  //         this.headers.forEach((header, index) => {
-  //             header.classList.remove('sort-asc', 'sort-desc');
-  //             if (index === this.sortState.column) {
-  //                 header.classList.add(this.sortState.order === 'asc' ? 'sort-asc' : 'sort-desc');
-  //             }
-  //         });
-  //     }
-  // }
-
-  // new SortableTable('.tableSort');
 
   (function () {
     'use strict';
@@ -316,3 +241,4 @@ function scrollTables(obj) {
       });
     });
   })();
+

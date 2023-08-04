@@ -382,6 +382,10 @@ td.right {
 td a {
   color: #bd601c;
 }
+td a:hover, td a:focus {
+  color: #433b39;
+  text-decoration: none;
+}
 
 .tableSort th.sortable {
   cursor: pointer;
@@ -460,6 +464,28 @@ td a {
   height: 100%;
   background: url(../images/icon_ar.svg) no-repeat center;
   cursor: pointer;
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: none;
+}
+
+.necessary {
+  color: red;
+  margin: 0px 0.2em;
+}
+
+.formTable {
+  border-top: 0;
+  border-bottom: 0;
+}
+.formTable th {
+  background: none;
+  text-align: left;
+}
+.formTable td {
+  border-top: 0;
 }
 
 input[type=checkbox],
@@ -608,6 +634,8 @@ input[type=radio] {
   text-decoration: none;
   margin: 0 3%;
   line-height: 140%;
+  -webkit-box-shadow: 0 2px 24px rgba(34, 30, 30, 0.3);
+          box-shadow: 0 2px 24px rgba(34, 30, 30, 0.3);
 }
 @media screen and (max-width: 680px) {
   .court a {
@@ -625,7 +653,7 @@ input[type=radio] {
   }
 }
 .court a:hover, .court a:focus {
-  background: url(../images/icon_libra.png) no-repeat center 36px, linear-gradient(333deg, rgb(141, 93, 10) 0%, rgb(34, 30, 30) 100%);
+  background: #bd601c url(../images/icon_libra.png) no-repeat center 36px;
 }
 
 .statusBtn {

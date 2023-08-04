@@ -35,25 +35,26 @@
       <div class="mainContent">
         <div class="mainMenu">
           <ul>
-            <li><a href="" class="active">現場抽號</a></li>
-            <li><a href="">預約今日進度</a></li>
-            <li><a href="">預約登錄</a></li>
-            <li><a href="">查詢/取消預約</a></li>
-            <li><a href="">問卷新增</a></li>
-            <li><a href="">問卷管理</a></li>
+            <li><a href="" class="active">抽號</a></li>
+            <li><a href="">預約服務進度</a></li>
+            <li><a href="">查詢預約人數</a></li>
             <li><a href="">報表</a></li>
           </ul>
         </div>
         <div class="numberList">
-          <div class="numberBlock">已抽號碼<span class="number">0</span></div>
-          <div class="numberBlock">等待號數<span class="number">0</span></div>
+          <div class="numberBlock">服務中號碼<span class="number"></span></div>
+          <div class="numberBlock">等待人數<span class="number">0</span></div>
           <div class="numberBlock">
             本時段號數餘額<span class="number">20</span>
           </div>
         </div>
-        <!-- 抽號 -->
-        <div class="takeNumber">
-          <button>抽號</button>
+        <div class="statusBtn">
+          <ul>
+            <li><a href="" class="reserve">預約中</a></li>
+            <li><a href="" class="serving">服務中</a></li>
+            <li><a href="" class="pass">過號</a></li>
+            <li><a href="" class="served">已服務</a></li>
+          </ul>
         </div>
         <div class="tableWrapper">
           <!-- 如果要能夠左右滾動 則須在最外層增加 class “tableWrapper”在table同層 增加 class "scrollTable" -->
@@ -61,32 +62,43 @@
           <table class="scrollTable tableSort">
             <thead>
               <tr>
+                <th scope="col">選擇</th>
                 <th scope="col">區公所</th>
-                <th scope="col">抽號時間</th>
-                <th scope="col" data-type="number" class="sortable">
-                  抽號號碼
+                <th scope="col"" data-type="number" class="sortable">時段/組別</th>
+                <th scope="col">
+                  問題簡述
                 </th>
                 <th scope="col">服務狀態</th>
               </tr>
             </thead>
             <tbody>
               <tr class="serving">
-                <td>本院院區</td>
-                <td>11:51:17</td>
-                <td>1</td>
+                <td class="center"><input type="checkbox" /></td>
+                <td><a href="">本院院區</a></td>
+                <td>09:00-09:20_1</td>
+                <td></td>
                 <td>服務中</td>
               </tr>
               <tr>
-                <td>本院院區</td>
-                <td>11:58:17</td>
-                <td>2</td>
+                <td class="center"><input type="checkbox" /></td>
+                <td><a href="">新北市烏來區</a></td>
+                <td>10:00-10:20_2</td>
+                <td></td>
+                <td>過號</td>
+              </tr>
+              <tr>
+                <td class="center"><input type="checkbox" /></td>
+                <td><a href="">新北市坪林區</a></td>
+                <td>10:20-10:40_1</td>
+                <td>監護/輔助宣告，拋棄繼承</td>
                 <td>已服務</td>
               </tr>
               <tr>
-                <td>新北市烏來</td>
-                <td>11:59:17</td>
-                <td>3</td>
-                <td>過號</td>
+                <td class="center"><input type="checkbox" /></td>
+                <td><a href="">新北市烏來區</a></td>
+                <td>11:00-11:20_1</td>
+                <td>書狀詢問，遞狀方式</td>
+                <td></td>
               </tr>
             </tbody>
           </table>

@@ -1,0 +1,26 @@
+abbr[title] {
+  border-bottom: none;
+  text-decoration: none;
+}
+.necessary {
+  color: red;
+  margin: 0px 0.2em;
+}
+.formTable {
+  border-top: 0;
+  border-bottom: 0;
+  th {
+    background: none;
+    text-align: left;
+  }
+  td {
+    border-top: 0;
+  }
+}
+input[type="checkbox"],
+input[type="radio"] {
+  font-size: 1em;
+  margin: 0.3em;
+  width: 1em;
+  height: 1em;
+}

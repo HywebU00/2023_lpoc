@@ -29,17 +29,10 @@ body {
     display: block;
   }
 }
+
 @import "_header";
 @import "_table";
-
-input[type="checkbox"],
-input[type="radio"] {
-  font-size: 1em;
-  margin: 0.3em;
-  width: 1em;
-  height: 1em;
-}
-
+@import "_form";
 .wrap {
   width: 100%;
   max-width: 1120px;
@@ -207,6 +200,7 @@ input[type="radio"] {
     text-decoration: none;
     margin: 0 3%;
     line-height: 140%;
+    box-shadow: 0 2px 24px rgba(34, 30, 30, 0.3);
     @media screen and (max-width: 680px) {
       margin: 0 15px;
     }
@@ -225,12 +219,7 @@ input[type="radio"] {
     }
     &:hover,
     &:focus {
-      background: url(../images/icon_libra.png) no-repeat center 36px,
-        linear-gradient(
-          333deg,
-          rgba(141, 93, 10, 1) 0%,
-          rgba(34, 30, 30, 1) 100%
-        );
+      background: #bd601c url(../images/icon_libra.png) no-repeat center 36px;
     }
   }
 }
