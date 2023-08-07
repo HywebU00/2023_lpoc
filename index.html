@@ -12,14 +12,14 @@
       <script src="js/respond.min.js"></script>
     <![endif]-->
     <!-- mainJs -->
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/lpoc.css" />
     <!-- favicon -->
     <link href="images/favicon.png" rel="icon" type="image/x-icon" />
     <style>
       .demo_wrap {
         max-width: 1000px;
-        margin: 0em auto 1em;
-        padding: 15px 15px 3em;
+        margin: 2em auto 1em;
+        padding: 2em;
         clear: both;
         background: #fff;
       }
@@ -29,7 +29,8 @@
         margin: 0px auto;
         max-width: 415px;
         float: left;
-        margin-right: 1em;
+
+        font-size: 1.5rem;
       }
 
       @media screen and (max-width: 545px) {
@@ -39,17 +40,13 @@
           text-align: center;
         }
       }
-
-      .demo_wrap h1 img {
-        width: 415px;
-      }
-
       .num {
         width: 12%;
       }
 
       body {
         counter-reset: num;
+        font-size: 16px;
       }
 
       table {
@@ -66,7 +63,7 @@
       table th {
         border-left: none;
         border-right: none;
-        padding: 0.4em;
+        padding: 0.8em;
       }
 
       table td .gray {
@@ -96,7 +93,7 @@
         text-align: center;
         color: #888;
         font-size: 0.875rem;
-        content: counters(num, '.') ' ';
+        content: counters(num, ".") " ";
       }
 
       tbody tr td:nth-child(2) {
@@ -110,16 +107,22 @@
       .btnGrp {
         text-align: right;
       }
-
+      .btnGrp a {
+        color: #000;
+      }
       @media screen and (max-width: 545px) {
         .btnGrp {
           text-align: center;
+          margin-top: 16px;
         }
       }
 
       .tableWrapper {
         display: flex;
         align-items: flex-start;
+        width: 100%;
+        clear: both;
+        margin-top: 20px;
       }
 
       @media screen and (max-width: 545px) {
@@ -153,14 +156,13 @@
 
   <body>
     <div class="demo_wrap">
-      <h1><img src="images/logo.png" alt="" /></h1>
+      <h1>《訴訟程序視訊諮詢服務》管理系統</h1>
       <div class="btnGrp">
-        <a href="https://github.com/HywebU00/2023_nhia_member.git" class="btn">file download</a>
+        <a href="https://github.com/HywebU00/2023_nhia_member.git" class="btn"
+          >file download</a
+        >
       </div>
-      <hr />
       <div class="tableWrapper">
-        <h2>標準頁面</h2>
-        <!-- hyUI 標準頁面 -->
         <table>
           <thead>
             <tr>
@@ -173,62 +175,96 @@
           <tbody>
             <tr>
               <td></td>
-              <td>首頁</td>
-              <td><a href="mp.html"></a></td>
+              <td>01.登入頁</td>
+              <td><a href="01.html"></a></td>
               <td></td>
             </tr>
             <tr>
               <td></td>
-              <td>列表頁-條列</td>
-              <td><a href="lp.html"></a></td>
+              <td>02.據點端-法院選擇頁</td>
+              <td><a href="02.html"></a></td>
               <td></td>
             </tr>
             <tr>
               <td></td>
-              <td>列表頁-表格</td>
-              <td><a href="lp_table.html"></a></td>
+              <td>03-1.據點端-現場抽號</td>
+              <td><a href="03-1.html"></a></td>
               <td></td>
             </tr>
             <tr>
               <td></td>
-              <td>列表頁-相簿</td>
-              <td><a href="lp_album.html"></a></td>
+              <td>03-2.法院端-抽號</td>
+              <td><a href="03-2.html"></a></td>
               <td></td>
             </tr>
             <tr>
               <td></td>
-              <td>內容頁</td>
-              <td><a href="cp.html"></a></td>
+              <td>04-1.據點端-預約今日進度</td>
+              <td><a href="04-1.html"></a></td>
               <td></td>
             </tr>
             <tr>
               <td></td>
-              <td>節點頁</td>
-              <td><a href="np.html"></a></td>
+              <td>04-2.法院端-預約今日進度</td>
+              <td><a href="04-2.html"></a></td>
               <td></td>
             </tr>
             <tr>
               <td></td>
-              <td>網站地圖</td>
-              <td><a href="sitemap.html"></a></td>
+              <td>05.據點端-預約登錄</td>
+              <td><a href="05.html"></a></td>
               <td></td>
             </tr>
             <tr>
               <td></td>
-              <td>404 網站錯誤</td>
-              <td><a href="404.html"></a></td>
+              <td>06.法院端-查詢預約人數</td>
+              <td><a href="06.html"></a></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>07.據點端-查詢_取消預約</td>
+              <td><a href="07.html"></a></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>08.據點端-問卷新增</td>
+              <td><a href="08.html"></a></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>09.據點端-問卷管理</td>
+              <td><a href="09.html"></a></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>10.據點端_法院端-報表</td>
+              <td><a href="10.html"></a></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>修改密碼彈出視窗</td>
+              <td><a href="popup1.html"></a></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>聯絡方式彈出視窗</td>
+              <td><a href="popup2.html"></a></td>
               <td></td>
             </tr>
           </tbody>
         </table>
       </div>
-      <hr />
     </div>
-    <a href="javascript:;" class="scrollToTop" role="button">回頁首</a>
     <script>
-      let aName = document.querySelectorAll('tbody a');
+      let aName = document.querySelectorAll("tbody a");
       aName.forEach((i) => {
-        let Link = i.getAttribute('href');
+        let Link = i.getAttribute("href");
         i.textContent = Link;
       });
     </script>

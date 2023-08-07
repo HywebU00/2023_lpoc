@@ -6,21 +6,389 @@ abbr[title] {
   color: red;
   margin: 0px 0.2em;
 }
-.formTable {
-  border-top: 0;
-  border-bottom: 0;
-  th {
-    background: none;
-    text-align: left;
-  }
-  td {
-    border-top: 0;
+// 表單元件基本樣式 ////////////////////////////////////////////////
+form {
+  margin: 0;
+  padding: 0;
+}
+
+label {
+  display: inline-block;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+input,
+textarea,
+select,
+button,
+datalist,
+label {
+  font-size: inherit;
+  font-family: inherit;
+  box-sizing: border-box;
+  outline: none;
+  &:focus {
+    outline: none;
   }
 }
-input[type="checkbox"],
-input[type="radio"] {
-  font-size: 1em;
-  margin: 0.3em;
+
+// 文字的input樣式 ////////////////////////////
+%textInput {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  height: 2em;
+  line-height: 2;
+  padding: 0 0.5em;
+  margin: 0;
+  border-radius: 4px;
+  vertical-align: middle;
+  border: 1px solid $inputBorder;
+  background: #fff;
+  &:hover,
+  &:focus {
+    border: 1px solid $hilight;
+  }
+  // &:focus {
+  //   box-shadow: $fontColor 0 0 0 2px;
+  // }
+}
+// .asInput {
+//   height: 2.1em;
+//   line-height: 2.1;
+//   vertical-align: middle;
+//   background: #002;
+// }
+
+// 下拉選單樣式 ////////////////////////////
+%selectStyle {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  height: 2em;
+  line-height: 2em;
+  padding: 0 32px 0 0.8em;
+  vertical-align: middle;
+  border: 1px solid $inputBorder;
+  border-radius: 4px;
+  background: #fff url(../images/selectArrow.svg) no-repeat right 10px center;
+  background-size: 0.8em auto;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    // background: $fontColor;
+  }
+  &:focus {
+    // box-shadow: $fontColor 0 0 0 2px;
+  }
+}
+
+// 文字、數字型態的 input 樣式 //////////////
+input[type="text"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="file"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+input[type="week"] {
+  @extend %textInput;
+  &.fullWidth {
+    width: calc(100% - 6px);
+  }
+  &.halfWidth {
+    width: calc(50% - 3px);
+  }
+}
+
+// 下拉選單 ////////////////////////////
+select {
+  @extend %selectStyle;
+  &.fullWidth {
+    width: calc(100% - 6px);
+  }
+}
+
+// 按鈕樣式 ////////////////////////////
+button,
+input[type="submit"],
+input[type="button"],
+input[type="reset"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  height: 2em;
+  line-height: 2em;
+  padding: 0 1em;
+  margin: 3px;
+  vertical-align: middle;
+  cursor: pointer;
+  transition: 0.15s background;
+  border-radius: 4px;
+}
+
+button,
+input[type="submit"],
+input[type="button"],
+input[type="reset"] {
+  color: #fff;
+  background: $btnColor;
+  &:hover,
+  &:focus {
+    background: darken($btnColor, 15%);
+  }
+}
+
+textarea {
+  @extend %textInput;
+  resize: vertical;
+  line-height: 1.6;
+  height: 10em;
+  width: calc(100% - 6px);
+}
+
+// radio 和 checkbox ////////////////////////////
+input[type="radio"],
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0 6px;
   width: 1em;
   height: 1em;
+  line-height: 1;
+  border: 1px solid $inputBorder;
+  background: #fff;
+  vertical-align: middle;
+}
+input[type="radio"] {
+  border-radius: 50%;
+  &:focus {
+    border: 1px solid $hilight;
+  }
+  &:checked {
+    background: $hilight url(../images/icon_check_r.png) no-repeat center center;
+    border: 1px solid $hilight;
+    // &:focus {
+    //   background: $hilight url(../images/icon_check_r.png) no-repeat center
+    //     center;
+    // }
+  }
+}
+input[type="checkbox"] {
+  border-radius: 4px;
+  &:focus {
+    border: 1px solid $hilight;
+  }
+  &:checked {
+    background: $hilight url(../images/icon_check.png) no-repeat center center;
+    background-size: 96%;
+    // box-shadow: $btnBg2 0 0 0 2px;
+    // border-color: transparent;
+    &:focus {
+      // box-shadow: $fontInvert 0 0 0 2px, $btnBg2 0 0 0 4px;
+    }
+  }
+}
+
+//////////////////////////////////////////////////////////
+//////////////// disabled, readonly //////////////////////
+//////////////////////////////////////////////////////////
+
+// disabled
+select[disabled],
+textarea[disabled],
+textarea[disabled]:hover,
+textarea[disabled]:focus,
+input[disabled],
+input[disabled]:hover,
+input[disabled]:focus {
+  background: $disabledBg;
+  // border-color: $borderColorDim;
+  color: #666;
+  box-shadow: none;
+}
+
+// readonly
+textarea[readonly],
+textarea[readonly]:hover,
+textarea[readonly]:focus,
+input[type="text"][readonly],
+input[type="text"][readonly]:hover,
+input[type="text"][readonly]:focus {
+  background: #efefef;
+  color: #666;
+  // border-style: dashed;
+  // border-color: $borderColorDim;
+  box-shadow: none;
+  cursor: default;
+}
+select[disabled],
+input[disabled] {
+  color: #666;
+}
+
+// 按鈕的 readonly and disabled
+button[disabled],
+button.disabled,
+input[type="button"][disabled],
+input[type="submit"][disabled],
+button[disabled]:hover,
+input[type="submit"][disabled]:hover,
+button[disabled]:focus,
+input[type="submit"][disabled]:focus {
+  background: $disabledBg;
+  color: #999;
+  box-shadow: none;
+  cursor: default;
+}
+.formWrap {
+  p {
+    margin-bottom: 16px;
+  }
+  .ps {
+    color: $hilight;
+    text-align: center;
+    margin-bottom: 24px;
+    a {
+      color: $hilight;
+      &:hover,
+      &:focus {
+        text-decoration: none;
+      }
+    }
+  }
+  .formTable {
+    border-top: 0;
+    border-bottom: 0;
+    th,
+    td {
+      border-bottom: 0;
+    }
+    th {
+      background: none;
+      text-align: left;
+      padding: 8px;
+      font-weight: bold;
+      width: 9em;
+      label {
+        padding: 8px 8px 8px 18px;
+        position: relative;
+        line-height: 120%;
+        abbr[title] {
+          border-bottom: none;
+          text-decoration: none;
+        }
+        .necessary {
+          color: red;
+          margin: 0px 0.2em;
+          position: absolute;
+          left: 0;
+          top: 12px;
+        }
+      }
+    }
+    td {
+      padding: 8px;
+      border-top: 0;
+      width: calc(100% - 8em);
+      > input[type="text"]:only-child {
+        width: 100%;
+      }
+      > input[type="password"]:only-child {
+        width: 100%;
+      }
+      > select:only-child {
+        width: 100%;
+      }
+      img {
+        margin-right: 8px;
+        vertical-align: middle;
+      }
+      .formInline {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin: 8px 0;
+        label {
+          padding: 8px 16px 8px 0;
+          display: flex;
+          align-items: center;
+          input[type="radio"],
+          input[type="checkbox"] {
+            margin-left: 0;
+          }
+        }
+        // span {
+        //   & ~ select,
+        //   input {
+        //     margin: 0 8px;
+        //   }
+        // }
+      }
+
+      .duration {
+        input[type="text"] {
+          width: 15%;
+          @media screen and (max-width: 768px) {
+            margin-bottom: 4px;
+          }
+        }
+        span {
+          margin: 0 8px;
+        }
+      }
+      table {
+        border-top: 1px solid #444;
+        border-bottom: 1px solid #444;
+        th {
+          text-align: center;
+          background: #efeded;
+          padding: 16px 8px;
+        }
+        td {
+          text-align: center;
+          border-top: 1px solid #444;
+          padding: 16px 8px;
+        }
+      }
+    }
+    // tr:last-child td {
+    //   border-bottom: 1px solid #221f1e;
+    // }
+    // tr:last-child th {
+    //   border-bottom: 0;
+    // }
+  }
+  .btnGrp {
+    text-align: center;
+    margin: 16px 0 24px 0;
+    .btn {
+      min-width: 200px;
+      height: 54px;
+      line-height: 54px;
+      padding: 0 54px;
+      border-radius: 8px;
+      border: 1px solid #fff;
+      box-shadow: 0 2px 24px rgba(34, 30, 30, 0.3);
+      &.btnSubmit {
+        background: $secondary;
+        &[disabled] {
+          background: $disabledBg;
+          color: #999;
+        }
+        &:hover,
+        &:focus {
+          background: $primary;
+        }
+      }
+    }
+  }
 }

@@ -1,38 +1,72 @@
 table {
   border-collapse: collapse;
   width: 100%;
-  border-top: 2px solid #221f1e;
-  border-bottom: 2px solid #221f1e;
+  border-top: 2px solid $secondary;
+  border-bottom: 2px solid $secondary;
 }
 tr.serving {
   background: #f6ebdf;
 }
-th {
-  background: #efeded;
-  padding: 16px 8px;
-  text-align: center;
-  font-weight: normal;
-}
-td {
-  padding: 16px 8px;
-  text-align: left;
-  border-top: 1px solid #221f1e;
-  &.center {
+tr {
+  th {
+    background: #efeded;
+    padding: 16px 8px;
     text-align: center;
+    font-weight: normal;
+    border-bottom: 1px solid $secondary;
   }
-  &.left {
+  td {
+    padding: 16px 8px;
     text-align: left;
-  }
-  &.right {
-    text-align: right;
-  }
-  a {
-    color: #bd601c;
-    &:hover,
-    &:focus {
-      color: #433b39;
-      text-decoration: none;
+    border-bottom: 1px solid $secondary;
+    &.center {
+      text-align: center;
     }
+    &.left {
+      text-align: left;
+    }
+    &.right {
+      text-align: right;
+    }
+    a {
+      color: $hilight;
+      &:hover,
+      &:focus {
+        color: #433b39;
+        text-decoration: none;
+      }
+    }
+  }
+  &:last-child td {
+    border-bottom: 0;
+  }
+}
+.dayTime {
+  tr {
+    th,
+    td {
+      border-right: 1px solid $secondary;
+      text-align: center;
+      &:last-child {
+        border-right: 0;
+      }
+    }
+    th {
+      &.selectDayTime {
+        background: $hilight;
+        color: #fff;
+      }
+    }
+    td {
+      font-size: 24px;
+      font-weight: bold;
+      a {
+        display: block;
+      }
+    }
+  }
+  & ~ .dayTime {
+    border-top: 0;
   }
 }
 .tableSort {
@@ -68,27 +102,45 @@ td {
 }
 
 .tableWrapper {
-  overflow-x: scroll;
-  overflow-y: hidden;
-  scroll-behavior: smooth;
-  @media screen and (max-width: 768px) {
-    width: 100%;
-    display: block;
-    clear: both;
-    zoom: 1;
-    overflow: hidden;
-    overflow-x: auto;
-    padding-bottom: 1em;
-    -webkit-overflow-scrolling: touch;
-    -webkit-transform: translate3d(0, 0, 0);
-    table {
+  margin-bottom: 2em;
+
+  & > .tableScroll {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    @media screen and (max-width: 768px) {
       width: 100%;
-      // display:none;
-      min-width: 600px;
+      display: block;
+      clear: both;
+      zoom: 1;
+      overflow: hidden;
+      overflow-x: auto;
+      padding-bottom: 1em;
+      -webkit-overflow-scrolling: touch;
+      -webkit-transform: translate3d(0, 0, 0);
     }
-  }
-  .scrollTable {
-    min-width: 600px;
+    & > table {
+      min-width: 600px;
+      @media screen and (max-width: 768px) {
+        width: 100%;
+        // display:none;
+        min-width: 600px;
+      }
+      td {
+        button {
+          padding: 0 0.5em;
+          &.edit {
+            background: $primary;
+            &:hover,
+            &:focus {
+              background: $hilight;
+            }
+          }
+          &.delete {
+          }
+        }
+      }
+    }
   }
   .scrollTableNav {
     width: 60px;
@@ -100,6 +152,7 @@ td {
       rgba(255, 255, 255, 0.6) 39%,
       rgba(255, 255, 255, 0) 100%
     );
+    z-index: 9;
   }
   .scrollTableNavLeft {
     left: 0;

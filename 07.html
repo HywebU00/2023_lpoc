@@ -41,60 +41,61 @@
         <!-- 選單 -->
         <div class="mainMenu">
           <ul>
-            <li><a href="03-1.html" class="active">現場抽號</a></li>
+            <li><a href="03-1.html">現場抽號</a></li>
             <li><a href="04-1.html">預約今日進度</a></li>
             <li><a href="05.html">預約登錄</a></li>
-            <li><a href="07.html">查詢/取消預約</a></li>
+            <li><a href="07.html" class="active">查詢/取消預約</a></li>
             <li><a href="08.html">問卷新增</a></li>
             <li><a href="09.html">問卷管理</a></li>
             <li><a href="10.html">報表</a></li>
           </ul>
         </div>
-        <!-- 號碼列表 -->
-        <div class="numberList">
-          <div class="numberBlock">已抽號碼<span class="number">0</span></div>
-          <div class="numberBlock">等待號數<span class="number">0</span></div>
-          <div class="numberBlock">
-            本時段號數餘額<span class="number">20</span>
-          </div>
-        </div>
-        <!-- 抽號 -->
-        <div class="takeNumber">
-          <a href="">抽號</a>
+        <div class="formWrap">
+          <form action="">
+            <table class="formTable">
+              <tr>
+                <th>
+                  <label for="" class="formTitle">預約人姓名</label>
+                </th>
+                <td><input type="text" /></td>
+              </tr>
+              <tr>
+                <th>
+                  <label for="" class="formTitle">預約日期</label>
+                </th>
+                <td>
+                  <select name="" id="">
+                    <option value="">112-07-25 星期二</option>
+                    <option value="">112-07-25 星期二</option>
+                  </select>
+                </td>
+              </tr>
+            </table>
+            <div class="btnGrp">
+              <button type="button" class="btn">取消預約</button>
+              <button type="button" class="btn btnSubmit">查詢</button>
+            </div>
+          </form>
         </div>
         <!-- 如果要能夠左右滾動 則須在最外層增加 class “tableWrapper” -->
         <div class="tableWrapper">
-          <!-- 如果表格要可以升降冪，在table同層 增加 class "tableSort" -->
-          <table class="tableSort">
+          <table>
             <thead>
               <tr>
-                <th scope="col">區公所</th>
-                <th scope="col">抽號時間</th>
-                <!-- 如果是數字要加 data-type="number" class="sortable" -->
-                <th scope="col" data-type="number" class="sortable">
-                  抽號號碼
-                </th>
-                <th scope="col">服務狀態</th>
+                <th scope="col">選擇</th>
+                <th scope="col">日期</th>
+                <th scope="col">預約人姓名</th>
+                <th scope="col">時段／組別</th>
+                <th scope="col">問題簡述</th>
               </tr>
             </thead>
             <tbody>
               <tr class="serving">
-                <td>本院院區</td>
-                <td>11:51:17</td>
-                <td>1</td>
-                <td>服務中</td>
-              </tr>
-              <tr>
-                <td>本院院區</td>
-                <td>11:58:17</td>
-                <td>2</td>
-                <td>已服務</td>
-              </tr>
-              <tr>
-                <td>新北市烏來</td>
-                <td>11:59:17</td>
-                <td>3</td>
-                <td>過號</td>
+                <td class="center"><input type="checkbox" /></td>
+                <td>112-07-25</td>
+                <td>預約測試</td>
+                <td>09:00-09:20_1</td>
+                <td></td>
               </tr>
             </tbody>
           </table>

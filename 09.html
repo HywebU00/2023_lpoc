@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/lpoc.css" />
+    <script src="js/lpoc.js" async defer></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="header">
+        <!-- h1 -->
+        <h1 class="h1">
+          <span class="dep"><a href="index.html">臺灣臺北地方法院</a></span>
+          <!-- sys手機版才顯示 -->
+          <span class="sys">《訴訟程序視訊諮詢服務》管理系統</span>
+          <time>112-7-24 上午</time>
+        </h1>
+        <div class="navInfo">
+          <div class="member">
+            XX院區 朱小伶
+            <a href="popup1.html" class="setting" target="_blank">設定</a>
+          </div>
+          <a href="01.html" class="logOut">登出</a>
+        </div>
+        <!-- 更新訊息 -->
+        <div class="refresh">
+          26秒後自動更新
+          <a href="">手動更新</a>
+        </div>
+        <!-- subTitle內容上方大標 -->
+        <div class="subTitle">
+          <span>《訴訟程序視訊諮詢服務》</span>管理系統
+        </div>
+      </header>
+      <!-- 主要內容區 -->
+      <div class="mainContent">
+        <!-- 選單 -->
+        <div class="mainMenu">
+          <ul>
+            <li><a href="03-1.html">現場抽號</a></li>
+            <li><a href="04-1.html">預約今日進度</a></li>
+            <li><a href="05.html">預約登錄</a></li>
+            <li><a href="07.html">查詢/取消預約</a></li>
+            <li><a href="08.html">問卷新增</a></li>
+            <li><a href="09.html" class="active">問卷管理</a></li>
+            <li><a href="10.html">報表</a></li>
+          </ul>
+        </div>
+        <div class="formWrap">
+          <div class="ps">本作業僅提供過去三個工作日做修改及刪除</div>
+          <form action="">
+            <table class="formTable">
+              <tr>
+                <th>
+                  <label for="" class="formTitle">流水號</label>
+                </th>
+                <td>
+                  <input type="text" />
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <label for="" class="formTitle">視訊日期</label>
+                </th>
+                <td>
+                  <div class="formInline duration">
+                    <input type="text" /> <span>至</span> <input type="text" />
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <label for="" class="formTitle">視訊時段</label>
+                </th>
+                <td>
+                  <select name="" id="">
+                    <option value="">全部</option>
+                    <option value="">上午</option>
+                    <option value="">下午</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <label for="" class="formTitle">消息來源</label>
+                </th>
+                <td>
+                  <select name="" id="">
+                    <option value="">全部</option>
+                    <option value="">親友告知</option>
+                    <option value="">新北市政府網頁</option>
+                    <option value="">臺北地方法院網頁</option>
+                    <option value="">電子媒體</option>
+                    <option value="">現場人員告知</option>
+                    <option value="">其他</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <label for="" class="formTitle">取號方式</label>
+                </th>
+                <td>
+                  <select name="" id="">
+                    <option value="">全部</option>
+                    <option value="">現場抽號</option>
+                    <option value="">預約登錄</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <label for="" class="formTitle">現場人員服務</label>
+                </th>
+                <td>
+                  <select name="" id="">
+                    <option value="">全部</option>
+                    <option value="">很滿意</option>
+                    <option value="">滿意</option>
+                    <option value="">尚可</option>
+                    <option value="">不滿意</option>
+                    <option value="">非常不滿意</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <label for="" class="formTitle">法院視訊服務</label>
+                </th>
+                <td>
+                  <select name="" id="">
+                    <option value="">全部</option>
+                    <option value="">很滿意</option>
+                    <option value="">滿意</option>
+                    <option value="">尚可</option>
+                    <option value="">不滿意</option>
+                    <option value="">非常不滿意</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <label for="" class="formTitle"
+                    >法院是否有請您再找律師進行實體諮詢</label
+                  >
+                </th>
+                <td>
+                  <select name="" id="">
+                    <option value="">全部</option>
+                    <option value="">是</option>
+                    <option value="">否</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <label for="" class="formTitle">意見及建議</label>
+                </th>
+                <td>
+                  <input type="text" />
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <label for="" class="formTitle">單位</label>
+                </th>
+                <td>
+                  <select name="" id="">
+                    <option value="">全部</option>
+                  </select>
+                </td>
+              </tr>
+            </table>
+            <div class="btnGrp">
+              <button type="button" class="btn">取消</button>
+              <button type="button" class="btn btnSubmit">查詢</button>
+            </div>
+          </form>
+        </div>
+        <!-- 如果要能夠左右滾動 則須在最外層增加 class “tableWrapper” -->
+        <div class="tableWrapper">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col"></th>
+                <th scope="col">流水號</th>
+                <th scope="col">視訊時間</th>
+                <th scope="col">消息來源</th>
+                <th scope="col">取號方式</th>
+                <th scope="col">現場人員服務</th>
+                <th scope="col">法院視訊服務</th>
+                <th scope="col">法院是否有請您再找律師進行實體諮詢</th>
+                <th scope="col">意見及建議</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <button type="button" class="edit">修改</button>
+                  <button type="button" class="delete">刪除</button>
+                </td>
+                <td class="center">8</td>
+                <td>112074 下午</td>
+                <td>親友告知</td>
+                <td>現場抽號</td>
+                <td>很滿意</td>
+                <td>很滿意</td>
+                <td>否</td>
+                <td>很好，聲音再大聲一點會更好。</td>
+              </tr>
+              <tr>
+                <td>
+                  <button type="button" class="edit">修改</button>
+                  <button type="button" class="delete">刪除</button>
+                </td>
+                <td class="center">8</td>
+                <td>112074 下午</td>
+                <td>親友告知</td>
+                <td>現場抽號</td>
+                <td>很滿意</td>
+                <td>很滿意</td>
+                <td>否</td>
+                <td>很好，聲音再大聲一點會更好。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagination">
+          <form action="">
+            <div class="formInline">
+              <div class="total">
+                共<span>308</span>筆資料，第<span>1/18</span>頁，<label
+                  for="pet-select"
+                  >每頁顯示</label
+                >
+                <select name="" id="pet-select" aria-label="每頁顯示">
+                  <option value="">10</option>
+                  <option value="">20</option>
+                  <option value="">30</option>
+                  <option value="">40</option>
+                </select>
+                筆<input
+                  type="button"
+                  value="確定"
+                  class="btn btnSubmit"
+                  title="確定"
+                />
+              </div>
+            </div>
+          </form>
+          <ul class="page">
+            <li class="first"><a href="#" title="第一頁">第一頁 </a></li>
+            <li class="prev"><a href="#" title="回上一頁">回上一頁 </a></li>
+            <li class="active"><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">6</a></li>
+            <li><a href="#">7</a></li>
+            <li><a href="#">8</a></li>
+            <li><a href="#">9</a></li>
+            <li><a href="#">10</a></li>
+            <li class="next"><a href="#" title="下一頁">下一頁 </a></li>
+            <li class="last">
+              <a href="#" title="最後一頁">最後一頁 </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

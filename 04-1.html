@@ -12,52 +12,60 @@
   <body>
     <div class="wrap">
       <header class="header">
+        <!-- h1 -->
         <h1 class="h1">
-          <span class="dep"><a href="">臺灣臺北地方法院</a></span>
+          <span class="dep"><a href="index.html">臺灣臺北地方法院</a></span>
+          <!-- sys手機版才顯示 -->
           <span class="sys">《訴訟程序視訊諮詢服務》管理系統</span>
           <time>112-7-24 上午</time>
         </h1>
-
         <div class="navInfo">
           <div class="member">
-            XX院區 朱小伶 <a href="" class="setting">設定</a>
+            XX院區 朱小伶
+            <a href="popup1.html" class="setting" target="_blank">設定</a>
           </div>
-          <a href="" class="logOut">登出</a>
+          <a href="01.html" class="logOut">登出</a>
         </div>
+        <!-- 更新訊息 -->
         <div class="refresh">
           26秒後自動更新
-          <button>手動更新</button>
+          <a href="">手動更新</a>
         </div>
+        <!-- subTitle內容上方大標 -->
         <div class="subTitle">
           <span>《訴訟程序視訊諮詢服務》</span>管理系統
         </div>
       </header>
+      <!-- 主要內容區 -->
       <div class="mainContent">
+        <!-- 選單 -->
         <div class="mainMenu">
           <ul>
-            <li><a href="">現場抽號</a></li>
-            <li><a href="" class="active">預約今日進度</a></li>
-            <li><a href="">預約登錄</a></li>
-            <li><a href="">查詢/取消預約</a></li>
-            <li><a href="">問卷新增</a></li>
-            <li><a href="">問卷管理</a></li>
-            <li><a href="">報表</a></li>
+            <li><a href="03-1.html">現場抽號</a></li>
+            <li><a href="04-1.html" class="active">預約今日進度</a></li>
+            <li><a href="05.html">預約登錄</a></li>
+            <li><a href="07.html">查詢/取消預約</a></li>
+            <li><a href="08.html">問卷新增</a></li>
+            <li><a href="09.html">問卷管理</a></li>
+            <li><a href="10.html">報表</a></li>
           </ul>
         </div>
+        <!-- 號碼列表 -->
         <div class="numberList">
           <div class="numberBlock">
             服務中時段<span class="number">09:00-09:20_1</span>
           </div>
           <div class="numberBlock">等待號數<span class="number">3</span></div>
         </div>
+        <!-- 如果要能夠左右滾動 則須在最外層增加 class “tableWrapper” -->
         <div class="tableWrapper">
-          <!-- 如果要能夠左右滾動 則須在最外層增加 class “tableWrapper”在table同層 增加 class "scrollTable" -->
           <!-- 如果表格要可以升降冪，在table同層 增加 class "tableSort" -->
-          <table class="scrollTable tableSort">
+          <table class="tableSort">
             <thead>
               <tr>
                 <th scope="col">區公所</th>
-                <th scope="col" data-type="number" class="sortable">
+                <!-- 如果是時間要加 data-type="string" class="sortable" -->
+                <th scope="col" data-type="string" class="sortable">
                   時段/組別
                 </th>
                 <th scope="col">問題簡述</th>
@@ -86,6 +94,12 @@
               <tr>
                 <td>新北市烏來區</td>
                 <td>11:00-11:20_1</td>
+                <td>書狀詢問，遞狀方式</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>新北市烏來區</td>
+                <td>11:00-11:20_2</td>
                 <td>書狀詢問，遞狀方式</td>
                 <td></td>
               </tr>

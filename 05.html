@@ -12,44 +12,55 @@
   <body>
     <div class="wrap">
       <header class="header">
+        <!-- h1 -->
         <h1 class="h1">
-          <span class="dep"><a href="">臺灣臺北地方法院</a></span>
+          <span class="dep"><a href="index.html">臺灣臺北地方法院</a></span>
+          <!-- sys手機版才顯示 -->
           <span class="sys">《訴訟程序視訊諮詢服務》管理系統</span>
           <time>112-7-24 上午</time>
         </h1>
-
         <div class="navInfo">
           <div class="member">
-            XX院區 朱小伶 <a href="" class="setting">設定</a>
+            XX院區 朱小伶
+            <a href="popup1.html" class="setting" target="_blank">設定</a>
           </div>
-          <a href="" class="logOut">登出</a>
+          <a href="01.html" class="logOut">登出</a>
         </div>
+        <!-- 更新訊息 -->
         <div class="refresh">
           26秒後自動更新
-          <button>手動更新</button>
+          <a href="">手動更新</a>
         </div>
+        <!-- subTitle內容上方大標 -->
         <div class="subTitle">
           <span>《訴訟程序視訊諮詢服務》</span>管理系統
         </div>
       </header>
+      <!-- 主要內容區 -->
       <div class="mainContent">
+        <!-- 選單 -->
         <div class="mainMenu">
           <ul>
-            <li><a href="">現場抽號</a></li>
-            <li><a href="" class="active">預約今日進度</a></li>
-            <li><a href="">預約登錄</a></li>
-            <li><a href="">查詢/取消預約</a></li>
-            <li><a href="">問卷新增</a></li>
-            <li><a href="">問卷管理</a></li>
-            <li><a href="">報表</a></li>
+            <li><a href="03-1.html">現場抽號</a></li>
+            <li><a href="04-1.html">預約今日進度</a></li>
+            <li><a href="05.html" class="active">預約登錄</a></li>
+            <li><a href="07.html">查詢/取消預約</a></li>
+            <li><a href="08.html">問卷新增</a></li>
+            <li><a href="09.html">問卷管理</a></li>
+            <li><a href="10.html">報表</a></li>
           </ul>
         </div>
         <div class="formWrap">
+          <p>
+            註:<abbr class="necessary" title="為必填(選)欄位,不能為空白。"
+              >*</abbr
+            >為必填(選)欄位, 不能為空白。
+          </p>
           <form action="">
             <table class="formTable">
               <tr>
                 <th>
-                  <label for=""
+                  <label for="" class="formTitle"
                     ><abbr class="necessary" title="為必填(選)欄位,不能為空白。"
                       >*</abbr
                     >預約人姓名</label
@@ -59,15 +70,307 @@
               </tr>
               <tr>
                 <th>
-                  <label for=""
+                  <label for="" class="formTitle"
                     ><abbr class="necessary" title="為必填(選)欄位,不能為空白。"
                       >*</abbr
-                    >預約人姓名</label
+                    >預約日期</label
                   >
                 </th>
-                <td><input type="text" /></td>
+                <td>
+                  <select name="" id="">
+                    <option value="">112-07-25 星期二</option>
+                    <option value="">112-07-25 星期二</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <label for="" class="formTitle">問題簡述</label>
+                </th>
+                <td>
+                  <div class="formInline">
+                    <label>
+                      <input
+                        type="checkbox"
+                        name=""
+                        value=""
+                        title="詢問案號"
+                      />詢問案號</label
+                    >
+                    <label>
+                      <input
+                        type="checkbox"
+                        name=""
+                        value=""
+                        title="詢問庭期"
+                      />詢問庭期</label
+                    >
+                    <label>
+                      <input
+                        type="checkbox"
+                        name=""
+                        value=""
+                        title="詢問進度"
+                      />詢問進度</label
+                    >
+                    <label>
+                      <input
+                        type="checkbox"
+                        name=""
+                        value=""
+                        title="上訴、抗告"
+                      />上訴、抗告</label
+                    >
+                    <label>
+                      <input
+                        type="checkbox"
+                        name=""
+                        value=""
+                        title="聲明異議"
+                      />聲明異議</label
+                    >
+                    <label>
+                      <input
+                        type="checkbox"
+                        name=""
+                        value=""
+                        title="監護/輔助宣告"
+                      />監護/輔助宣告</label
+                    >
+                    <label>
+                      <input
+                        type="checkbox"
+                        name=""
+                        value=""
+                        title="拋棄繼承"
+                      />拋棄繼承</label
+                    >
+                    <label>
+                      <input
+                        type="checkbox"
+                        name=""
+                        value=""
+                        title="交保、責付"
+                      />交保、責付</label
+                    >
+                    <label>
+                      <input
+                        type="checkbox"
+                        name=""
+                        value=""
+                        title="公示宣告"
+                      />公示宣告</label
+                    >
+                    <label>
+                      <input
+                        type="checkbox"
+                        name=""
+                        value=""
+                        title="支付命令"
+                      />支付命令</label
+                    >
+                    <label>
+                      <input
+                        type="checkbox"
+                        name=""
+                        value=""
+                        title="本票裁定"
+                      />本票裁定</label
+                    >
+                    <label>
+                      <input
+                        type="checkbox"
+                        name=""
+                        value=""
+                        title="補發書類"
+                      />補發書類</label
+                    >
+                    <label>
+                      <input
+                        type="checkbox"
+                        name=""
+                        value=""
+                        title="書狀詢問"
+                      />書狀詢問</label
+                    >
+                    <label>
+                      <input
+                        type="checkbox"
+                        name=""
+                        value=""
+                        title="遞狀方式"
+                      />遞狀方式</label
+                    >
+                    <label>
+                      <input
+                        type="checkbox"
+                        name=""
+                        value=""
+                        title="強制執行"
+                      />強制執行</label
+                    >
+                    <label>
+                      <input
+                        type="checkbox"
+                        name=""
+                        value=""
+                        title="執行費用"
+                      />執行費用</label
+                    >
+                    <label>
+                      <input
+                        type="checkbox"
+                        name=""
+                        value=""
+                        title="程序費用"
+                      />程序費用</label
+                    >
+                    <label>
+                      <input
+                        type="checkbox"
+                        name=""
+                        value=""
+                        title="識別文書"
+                      />識別文書</label
+                    >
+                    <label>
+                      <input
+                        type="checkbox"
+                        name=""
+                        value=""
+                        title="公證"
+                      />公證</label
+                    >
+                    <label>
+                      <input
+                        type="checkbox"
+                        name=""
+                        value=""
+                        title="其他"
+                      />其他</label
+                    >
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <label for="" class="formTitle"
+                    ><abbr class="necessary" title="為必填(選)欄位,不能為空白。"
+                      >*</abbr
+                    >預約時段</label
+                  >
+                </th>
+                <td>
+                  <table>
+                    <tr>
+                      <th>上午</th>
+                      <th>第一組</th>
+                      <th>第二組</th>
+                    </tr>
+                    <tr>
+                      <td>09:00-09:20</td>
+                      <td><a href="">本院院區ＯＯ</a></td>
+                      <td><input type="radio" name="" value="" /></td>
+                    </tr>
+                    <tr>
+                      <td>09:20-09:40</td>
+                      <td><input type="radio" name="" value="" /></td>
+                      <td><input type="radio" name="" value="" /></td>
+                    </tr>
+                    <tr>
+                      <td>09:40-10:00</td>
+                      <td><input type="radio" name="" value="" /></td>
+                      <td><input type="radio" name="" value="" /></td>
+                    </tr>
+                    <tr>
+                      <td>10:00-10:20</td>
+                      <td><input type="radio" name="" value="" /></td>
+                      <td><input type="radio" name="" value="" /></td>
+                    </tr>
+                    <tr>
+                      <td>10:20-10:40</td>
+                      <td><input type="radio" name="" value="" /></td>
+                      <td><input type="radio" name="" value="" /></td>
+                    </tr>
+                    <tr>
+                      <td>10:40-11:00</td>
+                      <td><input type="radio" name="" value="" /></td>
+                      <td><input type="radio" name="" value="" /></td>
+                    </tr>
+                    <tr>
+                      <td>11:00-11:20</td>
+                      <td><input type="radio" name="" value="" /></td>
+                      <td><input type="radio" name="" value="" /></td>
+                    </tr>
+                    <tr>
+                      <td>11:20-11:40</td>
+                      <td><input type="radio" name="" value="" /></td>
+                      <td><input type="radio" name="" value="" /></td>
+                    </tr>
+                    <tr>
+                      <td>11:40-12:00</td>
+                      <td><input type="radio" name="" value="" /></td>
+                      <td><input type="radio" name="" value="" /></td>
+                    </tr>
+                  </table>
+                  <table>
+                    <tr>
+                      <th>下午</th>
+                      <th>第一組</th>
+                      <th>第二組</th>
+                    </tr>
+                    <tr>
+                      <td>14:00-14:20</td>
+                      <td><input type="radio" name="" value="" /></td>
+                      <td><input type="radio" name="" value="" /></td>
+                    </tr>
+                    <tr>
+                      <td>14:20-14:40</td>
+                      <td><input type="radio" name="" value="" /></td>
+                      <td><input type="radio" name="" value="" /></td>
+                    </tr>
+                    <tr>
+                      <td>14:40-15:00</td>
+                      <td><input type="radio" name="" value="" /></td>
+                      <td><input type="radio" name="" value="" /></td>
+                    </tr>
+                    <tr>
+                      <td>15:00-15:20</td>
+                      <td><input type="radio" name="" value="" /></td>
+                      <td><input type="radio" name="" value="" /></td>
+                    </tr>
+                    <tr>
+                      <td>15:20-15:40</td>
+                      <td><input type="radio" name="" value="" /></td>
+                      <td><input type="radio" name="" value="" /></td>
+                    </tr>
+                    <tr>
+                      <td>15:40-16:00</td>
+                      <td><input type="radio" name="" value="" /></td>
+                      <td><input type="radio" name="" value="" /></td>
+                    </tr>
+                    <tr>
+                      <td>16:00-16:20</td>
+                      <td><input type="radio" name="" value="" /></td>
+                      <td><input type="radio" name="" value="" /></td>
+                    </tr>
+                    <tr>
+                      <td>16:20-16:40</td>
+                      <td><input type="radio" name="" value="" /></td>
+                      <td><input type="radio" name="" value="" /></td>
+                    </tr>
+                    <tr>
+                      <td>16:40-17:00</td>
+                      <td><input type="radio" name="" value="" /></td>
+                      <td><input type="radio" name="" value="" /></td>
+                    </tr>
+                  </table>
+                </td>
               </tr>
             </table>
+            <div class="btnGrp">
+              <button type="button" class="btn btnSubmit">確認預約</button>
+            </div>
           </form>
         </div>
       </div>

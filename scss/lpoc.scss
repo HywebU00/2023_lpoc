@@ -1,5 +1,10 @@
 @charset "utf-8";
 @import url(../css/reset.css);
+@import "_var";
+@import "_header";
+@import "_table";
+@import "_form";
+@import "_pagination";
 
 body {
   position: relative;
@@ -21,18 +26,11 @@ body {
     content: "";
     width: 100vw;
     height: 6px;
-    background: linear-gradient(
-      90deg,
-      rgba(34, 30, 30, 1) 0%,
-      rgba(142, 94, 10, 1) 100%
-    );
+    background: linear-gradient(90deg, $secondary 0%, $primary 100%);
     display: block;
   }
 }
 
-@import "_header";
-@import "_table";
-@import "_form";
 .wrap {
   width: 100%;
   max-width: 1120px;
@@ -43,84 +41,33 @@ body {
   }
 }
 
-// .mainMenu {
-// 	display: flex;
-// 	align-items: center;
-// 	background: #333;
-// 	color: #fff;
-// 	height: 60px;
-// 	padding: 0 20px;
-// 	@media screen and (max-width: 768px) {
-// 		// position:fixed;
-// 		// top:0;
-// 		width: 100vw;
-// 		box-sizing: border-box;
-// 	}
-// 	.hamburger-icon {
-// 		display: none;
-// 		cursor: pointer;
-// 		flex-direction: column;
-// 		justify-content: center;
-// 		height: 20px;
-// 		@media screen and (max-width: 768px) {
-// 			display: block;
-// 		}
-// 		span {
-// 			display: block;
-// 			width: 30px;
-// 			height: 3px;
-// 			background: #fff;
-// 			margin: 0 0 5px;
-// 		}
-// 	}
-// 	.menu {
-// 		@media screen and (max-width: 768px) {
-// 			width: 100%;
-// 			background: #333;
-// 			position: absolute;
-// 			left: 0;
-// 			top: 60px;
-// 			max-height: 0;
-// 			overflow: hidden;
-// 			transition: max-height 0.3s ease;
-// 			&.show {
-// 				max-height: 1000px; /* 設定一個足夠大的數值，用於確保能顯示全部選單內容 */
-// 			}
-// 		}
-// 		ul {
-// 			display: flex;
-// 			list-style: none;
-// 			margin: 0;
-// 			padding: 0;
-// 			@media screen and (max-width: 768px) {
-// 				display: flex;
-// 				flex-direction: column;
-// 				background-color: #333;
-// 			}
-// 		}
-// 		li {
-// 			margin-left: 20px;
-// 			@media screen and (max-width: 768px) {
-// 				margin-left: 0;
-// 				padding: 10px;
-// 				text-align: center;
-// 			}
-// 			a {
-// 				color: #fff;
-// 				text-decoration: none;
-// 				font-size: 16px;
-// 			}
-// 		}
-// 	}
-// }
 .mainContent {
   background: #fff;
   border-radius: 12px;
   box-sizing: border-box;
   padding: 40px 60px 60px 60px;
   min-height: 60vh;
+  box-shadow: 0 4px 6px rgba(34, 30, 30, 0.3);
+
   @media screen and (max-width: 768px) {
     padding: 20px;
+  }
+}
+.popup {
+  width: 20%;
+  min-width: 500px;
+  background: #fff;
+  margin: 5vh auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(34, 30, 30, 0.3);
+  padding: 40px;
+  box-sizing: border-box;
+  @media screen and (max-width: 768px) {
+    min-width: 340px;
+    padding: 20px;
+  }
+  .btnGrp {
+    margin: 16px 0 0 0;
   }
 }
 .welcome {
@@ -129,7 +76,7 @@ body {
   align-items: center;
   padding: 0 8px 24px 8px;
   margin-bottom: 24px;
-  border-bottom: 2px solid #221f1e;
+  border-bottom: 2px solid $secondary;
 
   @media screen and (max-width: 680px) {
     flex-direction: column;
@@ -157,7 +104,7 @@ body {
       }
     }
     .zone {
-      color: #9a7129;
+      color: $primary;
       margin-right: 16px;
     }
   }
@@ -174,6 +121,10 @@ body {
       color: #000;
       img {
         margin-right: 8px;
+      }
+      &:hover,
+      &:focus {
+        color: $primary;
       }
     }
   }
@@ -192,7 +143,7 @@ body {
     max-width: 230px;
     text-align: center;
     background: url(../images/icon_libra.png) no-repeat center 36px,
-      linear-gradient(333deg, rgba(34, 30, 30, 1) 0%, rgba(141, 93, 10, 1) 100%);
+      linear-gradient(333deg, $secondary 0%, $primary 100%);
     padding: 90px 10px 30px 10px;
     box-sizing: border-box;
     border-radius: 12px;
@@ -219,7 +170,7 @@ body {
     }
     &:hover,
     &:focus {
-      background: #bd601c url(../images/icon_libra.png) no-repeat center 36px;
+      background: $hilight url(../images/icon_libra.png) no-repeat center 36px;
     }
   }
 }
@@ -243,23 +194,48 @@ body {
         border: 1px solid #fff;
         box-shadow: 0 4px 6px rgba(34, 30, 30, 0.3);
         border-radius: 10px;
+        transition: 0.5s background;
         &.take {
           background: #28a1a0;
+          &:hover,
+          &:focus {
+            background: darken(#28a1a0, 10%);
+          }
         }
         &.reserve {
           background: #2869a1;
+          &:hover,
+          &:focus {
+            background: darken(#2869a1, 10%);
+          }
         }
         &.serving {
           background: #ce5214;
+          &:hover,
+          &:focus {
+            background: darken(#ce5214, 10%);
+          }
         }
         &.pass {
           background: #7ca33f;
+          &:hover,
+          &:focus {
+            background: darken(#7ca33f, 10%);
+          }
         }
         &.served {
           background: #989695;
+          &:hover,
+          &:focus {
+            background: darken(#989695, 10%);
+          }
         }
         &.add {
           background: #734ba1;
+          &:hover,
+          &:focus {
+            background: darken(#734ba1, 10%);
+          }
         }
       }
     }
@@ -288,11 +264,7 @@ body {
         padding: 0 16px;
         text-decoration: none;
         color: #fff;
-        background: linear-gradient(
-          0deg,
-          rgba(34, 30, 30, 1) 40%,
-          rgba(114, 78, 15, 1) 100%
-        );
+        background: linear-gradient(0deg, $secondary 40%, $primary 100%);
         border: 1px solid #fff;
         box-shadow: 0 4px 6px rgba(34, 30, 30, 0.3);
         border-radius: 10px;
@@ -302,18 +274,18 @@ body {
         }
         &:hover,
         &:focus {
-          background: rgba(34, 31, 29, 1);
+          background: linear-gradient(0deg, $primary 40%, $primary 100%);
         }
         &.active {
-          background: #bd601c;
+          background: $hilight;
         }
       }
     }
   }
 }
 .numberList {
-  border-top: 3px solid #221f1e;
-  border-bottom: 3px solid #221f1e;
+  border-top: 3px solid $secondary;
+  border-bottom: 3px solid $secondary;
   padding: 16px;
   display: flex;
   justify-content: space-between;
@@ -327,7 +299,7 @@ body {
       font-size: 36px;
       font-weight: bold;
       margin-left: 24px;
-      color: #9a712a;
+      color: $hilight;
       @media screen and (max-width: 768px) {
         margin-left: 8px;
       }
@@ -337,12 +309,27 @@ body {
 .takeNumber {
   margin: 20px 0;
   text-align: center;
-  button {
+  a {
     padding: 16px 48px;
-    background: #bd601c;
+    background: $hilight;
     border: 1px solid #fff;
     font-size: 24px;
     color: #fff;
     border-radius: 12px;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.5s background;
+    &:hover,
+    &:focus {
+      background: $secondary 100%;
+    }
   }
+}
+.blockTitle {
+  text-align: center;
+  padding-bottom: 24px;
+  border-bottom: 2px solid #221f1e;
+  margin-bottom: 24px;
+  font-size: 24px;
+  font-weight: bold;
 }
