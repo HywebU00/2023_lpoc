@@ -309,9 +309,13 @@ input[type="submit"][disabled]:focus {
       > select:only-child {
         width: 100%;
       }
-      img {
+      .captcha {
         margin-right: 8px;
         vertical-align: middle;
+        @media screen and (max-width: 500px) {
+          margin-bottom: 4px;
+          display: block;
+        }
       }
       .formInline {
         display: flex;

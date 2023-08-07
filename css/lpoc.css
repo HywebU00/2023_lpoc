@@ -811,9 +811,15 @@ input[type=submit][disabled]:focus {
 .formWrap .formTable td > select:only-child {
   width: 100%;
 }
-.formWrap .formTable td img {
+.formWrap .formTable td .captcha {
   margin-right: 8px;
   vertical-align: middle;
+}
+@media screen and (max-width: 500px) {
+  .formWrap .formTable td .captcha {
+    margin-bottom: 4px;
+    display: block;
+  }
 }
 .formWrap .formTable td .formInline {
   display: -webkit-box;
