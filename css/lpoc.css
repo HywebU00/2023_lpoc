@@ -704,6 +704,7 @@ input[type=checkbox]:focus {
 input[type=checkbox]:checked {
   background: #bd601c url(../images/icon_check.png) no-repeat center center;
   background-size: 96%;
+  border: 1px solid #bd601c;
 }
 select[disabled],
 textarea[disabled],

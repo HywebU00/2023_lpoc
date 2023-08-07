@@ -190,6 +190,7 @@ input[type="checkbox"] {
   &:checked {
     background: $hilight url(../images/icon_check.png) no-repeat center center;
     background-size: 96%;
+    border: 1px solid $hilight;
     // box-shadow: $btnBg2 0 0 0 2px;
     // border-color: transparent;
     &:focus {
