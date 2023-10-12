@@ -422,7 +422,6 @@ tr:last-child td {
   margin-bottom: 2em;
 }
 .tableWrapper > .tableScroll {
-  overflow-x: scroll;
   overflow-y: hidden;
   scroll-behavior: smooth;
 }
